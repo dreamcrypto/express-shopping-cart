@@ -1,7 +1,5 @@
 # expressCart
 
-![expressCart](https://raw.githubusercontent.com/mrvautin/expressCart/master/public/images/logo.png)
-
 `expressCart` is a fully functional shopping cart built in Node.js (Express, MongoDB) with built in popular payment providers.
 
 Payment providers included:
@@ -12,28 +10,6 @@ Payment providers included:
 - [Adyen](https://www.adyen.com/)
 - [PayWay](https://www.payway.com.au/)
 - Instore
-
-[![Github stars](https://img.shields.io/github/stars/mrvautin/expressCart.svg?style=social&label=Star)](https://github.com/mrvautin/expressCart)
-
-[![Actions Status](https://github.com/mrvautin/expressCart/workflows/expressCart-tests/badge.svg)](https://github.com/mrvautin/expressCart/actions)
-
-[**View the demo**](https://demo.expresscart.markmoffat.com/) [**Admin demo**](https://demo.expresscart.markmoffat.com/admin/)
-
-```
-Demo credentials
-
-Admin User:
-- User: `demo@test.com`
-- Password: `test`
-
-Customer:
-- User: `test@test.com`
-- Password: `test`
-
-Discount code:
-- 10 amount: `DEMO_AMT10`
-- 10 percent: `DEMO_PCT10`
-```
 
 ## Installation
 
@@ -53,30 +29,6 @@ Keeping expressCart running after closing the terminal can be done in a few ways
 5. To start/stop: `pm2 start expressCart` / `pm2 stop expressCart`
 
 > Note: Node.js version 7.x or greater is needed.
-
-### Docker
-
-The easiest way to get up and running is using Docker. Once the Docker CLI is installed from [https://www.docker.com/get-docker](https://www.docker.com/get-docker).
-
-1. Enter the root of the expressCart application
-2. Change `/config/settings.json` - `"databaseConnectionString": "mongodb://mongodb:27017/expresscart"`
-3. Run: `docker-compose up --build`
-4. Visit [http://127.0.0.1:1111](http://127.0.0.1:1111) in your browser
-5. Optional. To install test data run the following 
-- `docker exec -it expresscart bash`
-- `npm run testdata`
-- `exit`
-
-### Deploy on Heroku
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mrvautin/expressCart)
-
-> Note: When deploying to Heroku you will need to configure your external MongoDB either on your own server or a hosted service on mLab, AWS etc.
-
-### Sample/Test data
-
-Sometimes you might want some default sample/test data. To create this, run `npm run testdata`.  
-Warning: Remember to only run this initially or anytime you want to reset the data as this function deletes ALL existing data.
 
 ## API
 
@@ -413,15 +365,3 @@ You can re-order menu items by clicking and dragging the arrows icon and placing
 You may want to create a static page to show contact details, about us, shipping information etc.
 
 New static pages are setup via `/admin/settings/pages`.
-
-## TODO
-
-- Modernize the frontend of the admin
-
-## Contributing
-
-I'm looking for contributors of any kind. I'm working on turning the admin panel into something more modern and using Vue.js. The frontend part of the website will always be a normal webapp with no SPA frameworks as I believe eCommerce apps should have SEO as top priority.
-
-Contributing payment providers and themes would be much appreciated. Payment providers are added by simply adding the payment provider file to `/lib/payments/provider.js`.
-
-If you see current code which could be enhanced (note: parts of the code is quite old but new to Github) you are welcome to submit a PR.

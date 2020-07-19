@@ -1,7 +1,6 @@
 {
   "name": "express-cart",
   "version": "1.1.18",
-  "description": "A fully functioning Node.js shopping cart with Stripe, PayPal and Authorize.net payments.",
   "private": false,
   "scripts": {
     "start": "node app.js",
@@ -112,14 +111,6 @@
     "payway",
     "westpac"
   ],
-  "author": "Mark Moffat",
+  "author": "Manojkumar Murugesan",
   "homepage": "https://expresscart.markmoffat.com",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mrvautin/expressCart.git"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mrvautin/expressCart/issues"
-  }
 }
